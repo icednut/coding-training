@@ -7,7 +7,7 @@ func main() {
 	fmt.Print("What is the input string? ")
 	fmt.Scanln(&input)
 
-	if (len(input) == 0) {
+	if len(input) == 0 {
 		fmt.Println("input something!")
 	} else {
 		fmt.Printf("%s has %d charqcters.", input, len(input))

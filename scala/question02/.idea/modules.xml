@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/question02.iml" filepath="$PROJECT_DIR$/.idea/modules/question02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scala [file:_Users_kakaopay_workspace_study_coding-training_question02-character_counting_scala_].iml" filepath="$PROJECT_DIR$/scala [file:_Users_kakaopay_workspace_study_coding-training_question02-character_counting_scala_].iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/scala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scala-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project/scala-build [file:_Users_kakaopay_workspace_study_coding-training_question02-character_counting_scala_].iml" filepath="$PROJECT_DIR$/project/scala-build [file:_Users_kakaopay_workspace_study_coding-training_question02-character_counting_scala_].iml" />
     </modules>
   </component>
 </project>
