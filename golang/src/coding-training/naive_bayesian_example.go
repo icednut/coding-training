@@ -2,19 +2,13 @@ package main
 
 import "fmt"
 
-func main() {
-	xTrain := [][]int{
-		{0, 1, 0, 1}, // 0
-		{1, 0, 1, 1}, // 1
-		{0, 0, 0, 1}, // 0
-		{1, 0, 1, 0}, // 1
-		{1, 1, 0, 0}, // 1
-	}
-	yTrain := []int{0, 1, 0, 1, 1}
-	xTest := []int{1, 1, 1, 0}
+type NaiveBayesianModel struct {
+    xTrain [][]int
+    yTrain []int
+}
 
-	result := predicWithNaiveBasianClassifier(xTrain, yTrain, xTest)
-	fmt.Println(result)
+type NaiveBayesianClassifier interface {
+    predict(xTest []int) int
 }
 
 /**
@@ -51,57 +45,72 @@ func main() {
  P(1|{1,1,1,0}) = (2/5 * 1/5 * 2/5 * 1/5) * 3/5
 
  고로 {1,1,1,0} 일 때는 1로 예측
-
  */
-func predicWithNaiveBasianClassifier(xTrain [][]int, yTrain []int, xTest []int) int {
-	rowCount := len(xTrain)
-	featureValCountForClass0 := [4]int{0, 0, 0, 0}
-	featureValCountForClass1 := [4]int{0, 0, 0, 0}
+func (m NaiveBayesianModel) predict(xTest []int) int {
+    rowCount := len(m.xTrain)
+    featureValCountForClass0 := [4]int{0, 0, 0, 0}
+    featureValCountForClass1 := [4]int{0, 0, 0, 0}
 
-	for i := 0; i < rowCount; i++ {
-		featureCount := len(xTrain[i])
+    for i := 0; i < rowCount; i++ {
+        featureCount := len(m.xTrain[i])
 
-		for j := 0; j < featureCount; j++ {
-			if xTrain[i][j] == xTest[j] && yTrain[i] == 0 {
-				featureValCountForClass0[j] += 1
-			} else if xTrain[i][j] == xTest[j] && yTrain[i] == 1 {
-				featureValCountForClass1[j] += 1
-			}
-		}
-	}
-	probForClass0 := [4]float64{
-		float64(featureValCountForClass0[0]) / float64(rowCount),
-		float64(featureValCountForClass0[1]) / float64(rowCount),
-		float64(featureValCountForClass0[2]) / float64(rowCount),
-		float64(featureValCountForClass0[3]) / float64(rowCount),
-	}
-	probForClass1 := [4]float64{
-		float64(featureValCountForClass1[0]) / float64(rowCount),
-		float64(featureValCountForClass1[1]) / float64(rowCount),
-		float64(featureValCountForClass1[2]) / float64(rowCount),
-		float64(featureValCountForClass1[3]) / float64(rowCount),
-	}
+        for j := 0; j < featureCount; j++ {
+            if m.xTrain[i][j] == xTest[j] && m.yTrain[i] == 0 {
+                featureValCountForClass0[j] += 1
+            } else if m.xTrain[i][j] == xTest[j] && m.yTrain[i] == 1 {
+                featureValCountForClass1[j] += 1
+            }
+        }
+    }
+    probForClass0 := [4]float64{
+        float64(featureValCountForClass0[0]) / float64(rowCount),
+        float64(featureValCountForClass0[1]) / float64(rowCount),
+        float64(featureValCountForClass0[2]) / float64(rowCount),
+        float64(featureValCountForClass0[3]) / float64(rowCount),
+    }
+    probForClass1 := [4]float64{
+        float64(featureValCountForClass1[0]) / float64(rowCount),
+        float64(featureValCountForClass1[1]) / float64(rowCount),
+        float64(featureValCountForClass1[2]) / float64(rowCount),
+        float64(featureValCountForClass1[3]) / float64(rowCount),
+    }
 
-	resultForClass0 := float64(1)
-	resultForClass1 := float64(1)
-	pc0 := 1
-	pc1 := 1
-	for i := 0; i < len(probForClass0); i++ {
-		resultForClass0 *= probForClass0[i]
-		resultForClass1 *= probForClass1[i]
-	}
-	for i := 0; i < len(yTrain); i++ {
-		if yTrain[i] == 0 {
-			pc0 += 1
-		} else {
-			pc1 += 1
-		}
-	}
-	p0 := float64(pc0) / float64(len(yTrain))
-	p1 := float64(pc1) / float64(len(yTrain))
+    resultForClass0 := float64(1)
+    resultForClass1 := float64(1)
+    pc0 := 1
+    pc1 := 1
+    for i := 0; i < len(probForClass0); i++ {
+        resultForClass0 *= probForClass0[i]
+        resultForClass1 *= probForClass1[i]
+    }
+    for i := 0; i < len(m.yTrain); i++ {
+        if m.yTrain[i] == 0 {
+            pc0 += 1
+        } else {
+            pc1 += 1
+        }
+    }
+    p0 := float64(pc0) / float64(len(m.yTrain))
+    p1 := float64(pc1) / float64(len(m.yTrain))
 
-	if resultForClass0*p0 > resultForClass1*p1 {
-		return 0
-	}
-	return 1
+    if resultForClass0*p0 > resultForClass1*p1 {
+        return 0
+    }
+    return 1
+}
+
+func main() {
+    xTrain := [][]int{
+        {0, 1, 0, 1}, // 0
+        {1, 0, 1, 1}, // 1
+        {0, 0, 0, 1}, // 0
+        {1, 0, 1, 0}, // 1
+        {1, 1, 0, 0}, // 1
+    }
+    yTrain := []int{0, 1, 0, 1, 1}
+    xTest := []int{1, 1, 1, 0}
+
+    model := NaiveBayesianModel{xTrain, yTrain}
+    result := model.predict(xTest)
+    fmt.Println(result)
 }
