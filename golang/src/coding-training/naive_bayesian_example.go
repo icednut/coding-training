@@ -12,8 +12,10 @@ type NaiveBayesianClassifier interface {
 }
 
 /**
- * P(A|C)와 P(B|C)의 확률값을 비교해서 더 큰 값의 레이블을 반환한다.
+ 미션:
+ P(A|C)와 P(B|C)의 확률값을 비교해서 더 큰 값의 레이블을 반환한다.
 
+ 풀이 과정:
  P(A|array) = (P(array|A) * P(A)) / P(array)
  P(B|array) = (P(array|B) * P(B)) / P(array)
 
@@ -26,7 +28,7 @@ type NaiveBayesianClassifier interface {
  P(array|B) = y가 1일 때, 지정한 array가 나올 확률
 
  위의 예제에서는 array가 {1, 1, 1, 0}으로 주어졌기 때문에 P({1, 1, 1, 0}|0)와 P({1, 1, 1, 0}|1)을 구하면 된다.
- 그러고 나서 높은 쪽의 레이블을 선택하면 된다.
+ 그러고 나서 높은 쪽의 레이블을 선택하면 된다. (각 피처는 상호 연관관계가 없이 독립적이기 때문에 각 피처별로 구한 확률을 곱한다)
 
  [클래스0의 경우]
  feature 1에 1이 나오면서 y가 0인 횟수 = 0, 확률은 0/5
