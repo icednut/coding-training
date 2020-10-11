@@ -22,10 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d73e5f3c-1706-452d-846c-baeb3fe804cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/io/icednut/coding/training/question05/MainApp.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d73e5f3c-1706-452d-846c-baeb3fe804cf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +119,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602424307844</updated>
-      <workItem from="1602424311687" duration="1156000" />
+      <workItem from="1602424311687" duration="1372000" />
     </task>
     <servers />
   </component>
@@ -141,53 +138,44 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1750" height="374" key="GridCell.Tab.0.bottom" timestamp="1602425397195">
+    <state width="1750" height="374" key="GridCell.Tab.0.bottom" timestamp="1602425474706">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="374" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1602425397195" />
-    <state width="1750" height="374" key="GridCell.Tab.0.center" timestamp="1602425397195">
+    <state width="1750" height="374" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1602425474706" />
+    <state width="1750" height="374" key="GridCell.Tab.0.center" timestamp="1602425474705">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="374" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1602425397195" />
-    <state width="1750" height="374" key="GridCell.Tab.0.left" timestamp="1602425397195">
+    <state width="1750" height="374" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1602425474705" />
+    <state width="1750" height="374" key="GridCell.Tab.0.left" timestamp="1602425474705">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="374" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1602425397195" />
-    <state width="1750" height="374" key="GridCell.Tab.0.right" timestamp="1602425397195">
+    <state width="1750" height="374" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1602425474705" />
+    <state width="1750" height="374" key="GridCell.Tab.0.right" timestamp="1602425474706">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="374" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1602425397195" />
-    <state width="1750" height="374" key="GridCell.Tab.1.bottom" timestamp="1602425401928">
+    <state width="1750" height="374" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1602425474706" />
+    <state width="1750" height="374" key="GridCell.Tab.1.bottom" timestamp="1602425474688">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="374" key="GridCell.Tab.1.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1602425401928" />
-    <state width="1750" height="374" key="GridCell.Tab.1.center" timestamp="1602425401928">
+    <state width="1750" height="374" key="GridCell.Tab.1.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1602425474688" />
+    <state width="1750" height="374" key="GridCell.Tab.1.center" timestamp="1602425474688">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="374" key="GridCell.Tab.1.center/0.23.1792.1097@0.23.1792.1097" timestamp="1602425401928" />
-    <state width="1750" height="374" key="GridCell.Tab.1.left" timestamp="1602425401928">
+    <state width="1750" height="374" key="GridCell.Tab.1.center/0.23.1792.1097@0.23.1792.1097" timestamp="1602425474688" />
+    <state width="1750" height="374" key="GridCell.Tab.1.left" timestamp="1602425474688">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="374" key="GridCell.Tab.1.left/0.23.1792.1097@0.23.1792.1097" timestamp="1602425401928" />
-    <state width="1750" height="374" key="GridCell.Tab.1.right" timestamp="1602425401928">
+    <state width="1750" height="374" key="GridCell.Tab.1.left/0.23.1792.1097@0.23.1792.1097" timestamp="1602425474688" />
+    <state width="1750" height="374" key="GridCell.Tab.1.right" timestamp="1602425474688">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state width="1750" height="374" key="GridCell.Tab.1.right/0.23.1792.1097@0.23.1792.1097" timestamp="1602425401928" />
+    <state width="1750" height="374" key="GridCell.Tab.1.right/0.23.1792.1097@0.23.1792.1097" timestamp="1602425474688" />
     <state x="710" y="267" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602424806320">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="710" y="267" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1792.1097@0.23.1792.1097" timestamp="1602424806320" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/io/icednut/coding/training/question05/MainApp.scala</url>
-          <line>11</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="ageStr.toInt" language="Scala" />
